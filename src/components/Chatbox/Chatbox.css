@@ -87,7 +87,7 @@ p {
 }
 
 .landscapechatdiv {
-  padding: 10px;
+  padding-left: 10px;
   height: 400px;
   overflow-y: scroll;
 }

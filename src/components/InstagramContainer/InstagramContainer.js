@@ -29,7 +29,7 @@ const InstagramContainer = ({defaultView}) => {
   })
   return(
       <div>
-        {view == "portrait" ?
+        {view === "portrait" ?
           <div className={view}>
             <Header />
             <Image className="mimage" src="nvidia-communities.jpg" />

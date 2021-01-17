@@ -46,7 +46,7 @@ const Toolbar = ({view, setView, textRef}) => {
 
   const chatClicked = () => {
     // Switch to landscape view, and focus on the input area
-    if (view == 'portrait') {
+    if (view === 'portrait') {
       setView('landscape');
     }
     textRef.current.focus();

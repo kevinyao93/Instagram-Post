@@ -99,6 +99,7 @@ const Chatbox = ({view, setView, hide}) => {
           </Row>
         );
       }
+      return false;
     }));
   }
 
@@ -202,7 +203,7 @@ const Chatbox = ({view, setView, hide}) => {
   const getTableData = values => {
     // Generate the chat table
     const currentTime = new Date().getTime();
-    if (view == 'portrait') {
+    if (view === 'portrait') {
       return portraitTable(values);
     }
     // Generate landscape view
@@ -256,7 +257,11 @@ const Chatbox = ({view, setView, hide}) => {
               {timeConversion(currentTime - comment.postTime)}
             </Col>
             <Col className="commentdetails" xs="auto">
-              {comment.liked.length} Likes
+              {comment.liked.length > 0 ? (
+                <p>{comment.liked.length} Likes</p>
+              ) : (
+                ''
+              )}
             </Col>
             <Col className="commentdetails" xs="auto" onClick={() => onReplyClick(index, comment)}>
               Reply
@@ -279,7 +284,7 @@ const Chatbox = ({view, setView, hide}) => {
                               clickable={true}
                               place='left'
                               effect="solid"
-                              offset={{right:'320px'}}
+                              offset={{right:'280px'}}
                             >
                               {tooltipClick(index, rIndex)}
                             </ReactTooltip>
@@ -301,7 +306,11 @@ const Chatbox = ({view, setView, hide}) => {
                                 {timeConversion(currentTime - reply.postTime)}
                               </Col>
                               <Col className="commentdetails" xs="auto">
-                                {reply.liked.length} Likes
+                                {reply.liked.length > 0 ? (
+                                  <p>{reply.liked.length} Likes</p>
+                                ) : (
+                                  ''
+                                )}
                               </Col>
                               <Col className="commentdetails" xs="auto" onClick={() => onReplyClick(index, reply)}>
                                 Reply
@@ -330,18 +339,18 @@ const Chatbox = ({view, setView, hide}) => {
     if (!hide) {
       messageEnd.current.scrollIntoView();
     }
-  }, [comments]);
+  }, [comments, hide]);
 
   return(
     <div className={view + 'chatbox'}>
-      {view == 'portrait' && (<Toolbar view={view} textRef={textRef} setView={setView}/>)}
+      {view === 'portrait' && (<Toolbar view={view} textRef={textRef} setView={setView}/>)}
       {!hide && (
         <div className={view + "chatdiv"}>
           {getTableData(comments)}
           <div ref={messageEnd} />
         </div>
       )}
-      {view == 'landscape' && (<Toolbar view={view} textRef={textRef} setView={setView}/>)}
+      {view === 'landscape' && (<Toolbar view={view} textRef={textRef} setView={setView}/>)}
       {!hide && (
         <InputGroup>
           <Textarea
