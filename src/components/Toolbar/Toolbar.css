@@ -1,0 +1,18 @@
+.lefticons {
+  font-size: 24px;
+  width: 25px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.righticon {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.liketext {
+  padding-left:5px;
+  font-size: 14px;
+}

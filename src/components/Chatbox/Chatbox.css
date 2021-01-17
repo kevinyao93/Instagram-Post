@@ -1,0 +1,117 @@
+table {
+  width: 100%;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+p {
+  color: gray;
+  cursor: pointer;
+}
+.portraitchatbox {
+  width: 100%;
+}
+
+.landscapechatbox {
+  width: 100%;
+}
+
+.chatimage {
+  height: 30px;
+  width: 30px;
+}
+
+.comment {
+  margin-left: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.lscomment {
+  text-align: left;
+  font-size: 14px;
+  padding: 0px;
+}
+
+.heart{
+  margin-right: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.commentdetails {
+  padding-left: 20px;
+  padding-right: 0px;
+  color: gray;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.showall {
+  color:gray;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.textarea {
+  outline: 0;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #FFF;
+  resize: none;
+  font: inherit;
+  display: block;
+  max-height:60px;
+  width: 85%;
+}
+
+.post {
+  width: 10%;
+}
+
+.replydiv {
+  margin-left: 75px;
+  padding-right: 90px;
+  width: 100%;
+}
+
+.replyrow {
+  padding-bottom: 5px;
+}
+
+.portraitchatdiv {
+  height: 200px;
+}
+
+.landscapechatdiv {
+  padding: 10px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.landscapechatdiv::-webkit-scrollbar {
+  display:none;
+}
+
+.settingsbutton {
+  margin: 0 !important;
+  border-radius: 0;
+  background-color: white;
+}
+
+.rttooltip {
+  pointer-events: auto !important;
+  cursor: pointer;
+  color: gray !important;
+  background-color: white !important;
+  padding: 5px !important;
+  opacity: .2;
+}
+
+.lsmodal .modal-content {
+  background-color: transparent;
+  border: none;
+}

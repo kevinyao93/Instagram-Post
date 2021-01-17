@@ -1,0 +1,32 @@
+.portrait{
+  width: 100vw;
+  max-width: 600px;
+  min-width: 150px;
+  margin: auto;
+  margin-top: 10px;
+  background: white;
+}
+
+.landscape {
+  width: 100vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: white;
+}
+
+.landscapeImage {
+  margin: 0;
+  padding: 0;
+}
+
+.landscapechat {
+  padding-left: 0px;
+}
+
+.mimage {
+  max-width: 600px;
+  max-height: 600px;
+  width: 100vw;
+  height: 100vw;
+}
